@@ -1,0 +1,652 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+}
+
+button {
+  padding: 15px 75px;
+  border-radius: 5px;
+  background-color: rgb(42, 148, 226);
+  border: none;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.footer .container .logos, .footer .container, .section-4 .container, .section-3 .links, .section-3 .cards__txt-img, .section-3 .cards, .section-2 .content, .section-1 .apartments__info, .section-1 .apartments, .section-1 .question__answer, .section-1 .question__img, .showcase .nav__logos, .showcase .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase {
+  background: url("./assets/images/showcase.png") no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+  padding-bottom: 70px;
+}
+.showcase .nav {
+  align-items: center;
+  padding-top: 30px;
+}
+.showcase .nav__menu {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.showcase .nav__menu .bar {
+  padding: 50px;
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  transform: translateX(-100%);
+  background-color: white;
+  transition: 1.5s;
+}
+.showcase .nav__menu .bar ul {
+  text-align: center;
+}
+.showcase .nav__menu .bar ul li {
+  padding: 30px 0;
+}
+.showcase .nav__menu .bar ul li a {
+  color: rgb(42, 148, 226);
+}
+.showcase .nav__menu label i {
+  color: rgb(42, 148, 226);
+  font-size: 1.5rem;
+}
+.showcase .nav__menu .close {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 101;
+  transition: 1.5s;
+}
+.showcase .nav__menu #menu:checked ~ .close {
+  display: block;
+}
+.showcase .nav__menu #menu:checked + .bar {
+  transform: translateX(0%);
+}
+.showcase .nav__menu #menu {
+  display: none;
+}
+.showcase .nav__logos {
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.showcase .nav__logo-1 {
+  position: absolute;
+  left: 6px;
+  top: -20px;
+}
+@media screen and (max-width: 800px) {
+  .showcase .nav__logo-txt {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .showcase .nav__tel {
+    display: none;
+  }
+}
+.showcase .nav__tel p {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .showcase .nav__tel p {
+    font-size: 25px;
+  }
+}
+.showcase .nav__tel button {
+  width: 100%;
+  border: 1px solid rgb(42, 148, 226);
+  background-color: transparent;
+  color: black;
+}
+.showcase .nav__tel button:hover {
+  background-color: rgb(42, 148, 226);
+  color: white;
+}
+.showcase .txt h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+  .showcase .txt h1 {
+    font-size: 28px;
+  }
+}
+.showcase .txt p {
+  padding: 40px 0;
+}
+.showcase .txt__numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (max-width: 800px) {
+  .showcase .txt__numbers {
+    display: none;
+  }
+}
+.showcase .txt__number {
+  display: flex;
+  gap: 10px;
+}
+.showcase .txt__number h1 {
+  font-size: 80px;
+  font-weight: 100;
+}
+.showcase .txt .bottle {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+.showcase .txt button {
+  padding: 20px 40px;
+}
+
+.section-1 {
+  padding: 40px 0;
+  text-align: center;
+}
+.section-1 h1 {
+  padding: 30px;
+}
+.section-1 .question {
+  display: flex;
+  margin-top: 30px;
+  text-align: left;
+  border: 3px solid #F6F6F6;
+}
+@media screen and (max-width: 1200px) {
+  .section-1 .question {
+    flex-wrap: wrap;
+  }
+}
+.section-1 .question__card {
+  padding: 30px;
+}
+.section-1 .question__card h2 {
+  padding-bottom: 30px;
+}
+.section-1 .question__img {
+  text-align: center;
+  gap: 30px;
+}
+.section-1 .question__img div {
+  width: 44%;
+}
+.section-1 .question__img p {
+  font-weight: bold;
+  padding: 20px 0;
+  color: gray;
+}
+.section-1 .question__img img {
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .section-1 .question__img {
+    flex-wrap: wrap;
+  }
+}
+.section-1 .question__answer {
+  padding-top: 30px;
+  border-top: 2px solid #F1F1F1;
+}
+.section-1 .question__answer a {
+  color: rgb(42, 148, 226);
+  font-weight: bold;
+}
+.section-1 .question__answer a:hover {
+  text-decoration: underline;
+}
+.section-1 .question__check {
+  padding: 30px;
+  border-left: 2px solid #F6F6F6;
+}
+@media screen and (max-width: 1200px) {
+  .section-1 .question__check {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+.section-1 .question__tick {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0;
+}
+.section-1 .question__tick p {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.section-1 .question__tick img {
+  width: 100%;
+}
+.section-1 .grid {
+  width: 100%;
+  display: grid;
+  gap: 3px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.section-1 .grid .grid1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.section-1 .grid .grid2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.section-1 .grid .grid3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.section-1 .grid .grid4 {
+  grid-row: 2/3;
+  grid-column: 2/4;
+}
+.section-1 .grid .grid5 {
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+.section-1 .grid .grid6 {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+@media screen and (max-width: 1200px) {
+  .section-1 .grid .grid1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+  .section-1 .grid .grid2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .section-1 .grid .grid3 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .section-1 .grid .grid4 {
+    display: none;
+  }
+  .section-1 .grid .grid5 {
+    display: none;
+  }
+  .section-1 .grid .grid6 {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .section-1 .grid .grid2 {
+    display: none;
+  }
+  .section-1 .grid .grid3 {
+    display: none;
+  }
+  .section-1 .grid .grid4 {
+    display: none;
+  }
+  .section-1 .grid .grid5 {
+    display: none;
+  }
+  .section-1 .grid .grid6 {
+    display: none;
+  }
+}
+.section-1 .grid__img {
+  width: 100%;
+  position: relative;
+}
+.section-1 .grid__img h2 {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  z-index: 101;
+  color: white;
+}
+.section-1 .grid__hide {
+  display: none;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  color: white;
+  z-index: 99;
+}
+.section-1 .grid__hide p {
+  padding: 20px 0;
+}
+.section-1 .grid__img:hover > .grid__hide {
+  display: block;
+}
+.section-1 .grid__img:hover > h2 {
+  transform: translateY(-400%);
+}
+.section-1 .show {
+  display: flex;
+}
+.section-1 .show__sum {
+  width: 20%;
+  margin-top: 30px;
+  padding: 20px 0;
+  border: 1px solid #EEF3FA;
+}
+.section-1 .show__active {
+  background-color: rgb(42, 148, 226);
+  color: white;
+}
+.section-1 .show__sum:hover {
+  background: #F6F6F6;
+}
+.section-1 .show__active:hover {
+  background-color: rgb(109, 172, 218);
+}
+@media screen and (max-width: 800px) {
+  .section-1 .hide {
+    display: none;
+  }
+}
+.section-1 .apartments {
+  padding-top: 30px;
+  text-align: left;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.section-1 .apartments__card {
+  width: 45%;
+  border: 1px solid rgb(246, 246, 246);
+}
+.section-1 .apartments__card img {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .section-1 .apartments__card {
+    width: 100%;
+  }
+}
+.section-1 .apartments__card:hover {
+  box-shadow: 0px 0px 18px rgba(233, 80, 79, 0.25);
+}
+.section-1 .apartments__txt:hover h3 {
+  color: rgb(42, 148, 226);
+}
+.section-1 .apartments__card:hover > .apartments__watch {
+  background-color: rgb(42, 148, 226);
+  color: white;
+}
+.section-1 .apartments__txt {
+  padding: 30px;
+}
+.section-1 .apartments__txt h3 {
+  padding-bottom: 15px;
+}
+.section-1 .apartments__sum h1 {
+  padding: 20px 0;
+}
+.section-1 .apartments__square p {
+  padding-top: 30px;
+}
+.section-1 .apartments__info {
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .section-1 .apartments__info {
+    flex-wrap: wrap;
+  }
+}
+.section-1 .apartments__watch {
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+}
+.section-1 .show-more {
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  width: 100%;
+  background: #F6F6F6;
+}
+.section-1 .show-more i {
+  font-size: 1.2rem;
+}
+.section-1 .show-more:hover {
+  background-color: rgb(42, 148, 226);
+  color: white;
+}
+
+.section-2 {
+  padding: 70px 0;
+}
+.section-2 .content {
+  gap: 50px;
+  align-items: center;
+}
+.section-2 .content__txt {
+  height: 100%;
+}
+.section-2 .content__txt p {
+  padding: 15px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+.section-2 .content__grid {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.section-2 .content__grid .img1 {
+  grid-row: 1/2;
+  grid-column: 1/5;
+}
+.section-2 .content__grid .img2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.section-2 .content__grid .img3 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.section-2 .content__grid .img4 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.section-2 .content__grid .img5 {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+@media screen and (max-width: 800px) {
+  .section-2 .content__grid {
+    display: none;
+  }
+}
+.section-2 .content__img {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.section-3 {
+  text-align: center;
+  padding: 70px 0;
+}
+.section-3 h1 {
+  padding-bottom: 40px;
+}
+.section-3 .cards {
+  text-align: left;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .section-3 .cards .hide {
+    display: none;
+  }
+}
+.section-3 .cards__card {
+  width: 45%;
+  position: relative;
+  padding: 30px 45px;
+  border: 0.3px solid rgb(42, 148, 226);
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .section-3 .cards__card {
+    width: 100%;
+  }
+}
+.section-3 .cards__card:hover {
+  box-shadow: 0px 3px 10px rgb(109, 172, 218);
+}
+.section-3 .cards__txt-img {
+  padding-top: 50px;
+}
+.section-3 .cards__txt h3 {
+  padding: 20px 0;
+}
+.section-3 .cards__txt a {
+  text-decoration: underline;
+  color: black;
+  font-size: 14px;
+}
+.section-3 .cards__txt p {
+  font-size: 14px;
+}
+.section-3 .cards__one {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+}
+.section-3 .cards__two {
+  position: absolute;
+  left: 7px;
+  top: 16px;
+}
+.section-3 .cards__three {
+  position: absolute;
+  left: 13px;
+  top: 21px;
+}
+.section-3 .links {
+  gap: 13%;
+  padding-top: 40px;
+}
+@media screen and (max-width: 800px) {
+  .section-3 .links .hide {
+    display: none;
+  }
+}
+.section-3 .links__link {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(42, 148, 226);
+}
+@media screen and (max-width: 800px) {
+  .section-3 .links__link {
+    justify-content: center;
+  }
+}
+.section-3 .links__link a {
+  padding: 12px 0;
+  text-decoration: underline;
+}
+.section-3 .links__link a:hover {
+  text-decoration: none;
+}
+
+.section-4 {
+  background: #EEF3FA;
+}
+.section-4 .container .text-4 {
+  padding: 60px 0;
+}
+.section-4 .container .text-4 h3 {
+  padding: 20px 0;
+}
+.section-4 .container .text-4 p {
+  padding-bottom: 20px;
+  line-height: 25px;
+}
+.section-4 .container .img-4 {
+  margin-top: 130px;
+}
+@media screen and (max-width: 800px) {
+  .section-4 .container .img-4 {
+    display: none;
+  }
+}
+
+.footer {
+  background-color: rgb(83, 88, 96);
+  padding: 40px 0;
+  color: white;
+}
+.footer .container {
+  display: flex;
+}
+.footer .container .text-p p {
+  padding: 10px 0;
+}
+.footer .container .logos {
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.footer .container .logos .logo {
+  background-color: antiquewhite;
+}
+.footer .container .logos .logo .logo-1 {
+  position: absolute;
+  left: 6px;
+  top: -20px;
+}
+@media screen and (max-width: 800px) {
+  .footer .container .logos .logo-txt {
+    display: none;
+  }
+}
+
+button:hover {
+  box-shadow: 0px 3px 10px rgb(42, 148, 226);
+}
+
+/*# sourceMappingURL=Style.css.map */
